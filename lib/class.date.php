@@ -12,10 +12,7 @@
 		function somarData($dataInicial, $dias)
 		{   
 			$quebrarDatas = explode("/", $dataInicial);
-			$mes = NULL;
-			$ano = '';
-			list($dia, $mes, $ano) = $quebrarDatas;
-			$dataNova = date('d/m/Y', mktime(0,0,0, int($mes), int($dia) + $dias, int($ano)));
+			$dataNova = date('d/m/Y', mktime(0,0,0, intval($quebrarDatas[1]), intval($quebrarDatas[0]) + $dias, intval($quebrarDatas[2])));			
 			return $dataNova;
 		}
 

@@ -9,7 +9,7 @@
 
     <h1 class="text-center">Conversao</h1>
     
-    <form class="form" action="naoseiainda.php" method="post">
+    <form class="form" action="test.php" method="post">
 
     <div class="row">
         <div class="form-group col-2">
