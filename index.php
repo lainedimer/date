@@ -31,11 +31,11 @@
 
     <div class="form-group">
         <label for="dia">Data</label>
-        <input type="text" name="data_inicial" class="form-control" required autofocus/>        
+        <input type="text" name="dataInicial" class="form-control" required autofocus/>        
     </div>
     <div class="form-group">
         <label for="dia">Data Final</label>
-        <input type="text" name="data_final" class="form-control" required autofocus/>        
+        <input type="text" name="dataFinal" class="form-control" required autofocus/>        
     </div>
     <div class="row">
         <div class="col-4">

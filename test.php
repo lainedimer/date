@@ -9,7 +9,7 @@
 
 	$date = new Date();
 
-	$date->somarData($dataInicial, $dias);
+	echo $date->somarData($dataInicial, $dias);
 	$date->somarMes($dataInicial, $meses);
 	$date->somarAno($dataInicial, $anos);
 	$date->inverteData($dataInicial);
