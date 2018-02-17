@@ -5,17 +5,24 @@
 	$dataFinal = isset($_POST['dataFinal']) ? $_POST['dataFinal'] : NULL;
 	$dias = isset($_POST['dia']) ? $_POST['dia'] : NULL;   
 	$meses = isset($_POST['mes']) ? $_POST['mes'] : NULL;   
-	$anos = isset($_POST['ano']) ? $_POST['ano'] : NULL;   
+	$anos = isset($_POST['ano']) ? $_POST['ano'] : NULL;
 
-	$date = new Date();
+	if(!empty($_POST['dateBr'])){
+		$radioSelecionado = 1;
+	}else{
+		$radioSelecionado = 0;
+	}
 
-	echo $date->somarData($dataInicial, $dias);
-	$date->somarMes($dataInicial, $meses);
-	$date->somarAno($dataInicial, $anos);
-	$date->inverteData($dataInicial);
-	$date->removerData($dataInicial, $dias);
-	$date->removerMes($dataInicial, $meses);
-	$date->getDayOfWeek($dataInicial);
-	$date->dateDiffPorExtenso($dataInicial, $dataFinal);
+	$date = new Date();	
+
+	// $date->somarData($dataInicial, $dias);
+	// $date->somarMes($dataInicial, $meses);
+	// $date->somarAno($dataInicial, $anos);
+	echo $date->formatDate($dataInicial, $radioSelecionado);	
+	// $date->removeDay($dataInicial, $dias);
+	// $date->removeMonth($dataInicial, $meses);
+	// $date->removeYear($dataInicial, $anos);
+	// $date->getDayOfWeek($dataInicial, $radioSelecionado);
+	// $date->dateDiffPorExtenso($dataInicial, $dataFinal);
 
 ?>

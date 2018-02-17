@@ -15,14 +15,14 @@
         <div class="form-group col-2">
             <div class="form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="date_br" id="data_inicial1" value="option1" checked>BR
+                    <input class="form-check-input" type="radio" name="dateBr" id="data_inicial1" value="option1">BR
                 </label>
             </div>
         </div>
         <div class="form-group col-2">
             <div class="form-check">
                 <label class="form-check-label">
-                   <input class="form-check-input" type="radio" name="date_eua" id="data_inicial2" value="option2">EUA
+                   <input class="form-check-input" type="radio" name="dateEua" id="data_inicial2" value="option2">EUA
                 </label>
             </div>
         </br>
