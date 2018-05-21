@@ -2,15 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Conversao de datas</title>
+    <title>Date Converter</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+
 
 </head>
+
 <body class="container">
 
     <h1 class="text-center">Conversion</h1>
-    
-    <form class="form" action="test.php" method="post">
+
+    <form class="form" action="index.php" method="post">
 
     <div class="row">
         <div class="form-group col-2">
@@ -27,36 +30,42 @@
                 </label>
             </div>
         </br>
-        </div> 
-    </div>  
+        </div>
+    </div>
 
     <div class="form-group">
-        <label for="dia">Data Inicial</label>
-        <input type="text" name="dataInicial" class="form-control"/>        
+        <label for="dia">Selecione uma data</label>
+        <input type="text" name="dataInicial" class="form-control" id="calendario"/>
+
+    </div>
+    <div>
+        <label for="result">Resultado: </label>
+        <?php include "test.php";?>
+
     </div>
     <div class="form-group">
         <label for="dia">Data Final</label>
-        <input type="text" name="dataFinal" class="form-control"/>        
+        <input type="text" name="dataFinal" class="form-control"/>
     </div>
     <div class="row">
         <div class="col-4">
             <div class="form-group">
                 <label for="dia">Dia</label>
-                <input type="text" name="dia" class="form-control"/>        
-            </div> 
+                <input type="text" name="dia" class="form-control"/>
+            </div>
         </div>
         <div class="col-4">
             <div class="form-group">
                 <label for="dia">Mes</label>
-                <input type="text" name="mes" class="form-control"/>        
+                <input type="text" name="mes" class="form-control"/>
             </div>
         </div>
         <div class="col-4">
             <div class="form-group">
                 <label for="dia">Ano</label>
-                <input type="text" name="ano" class="form-control"/>        
+                <input type="text" name="ano" class="form-control"/>
             </div>
-        </div>  
+        </div>
     </div>
     </br>
     <p class="text-left">Escolha uma opcao:</p>
@@ -69,13 +78,19 @@
         <option value="removeMonth">Remove month</option>
         <option value="removeYear">Remove year</option>
         <option value="getDayOfWeek">Get day of week</option>
-        <option value="dateDiffInFull">Date difference in full</option>        
+        <option value="dateDiffInFull">Date difference in full</option>
     </select></br>
 
-    <button class="btn btn-primary" type="submit">Enviar</button>
+    <button class="btn btn-primary" type="submit">Convert</button>
     </form>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+    <script >
+    $(function() {
+      $( "#calendario" ).datepicker()
+    });
+    </script>
 </body>
 </html>
-
