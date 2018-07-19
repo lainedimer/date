@@ -40,7 +40,9 @@
     </div>
     <div>
         <label for="result">Resultado: </label>
-        <?php include "test.php";?>
+        <div id="result"> <h2><?php include "test.php";?> </h2>
+        </div>
+
 
     </div>
     <div class="form-group">
@@ -81,7 +83,7 @@
         <option value="dateDiffInFull">Date difference in full</option>
     </select></br>
 
-    <button class="btn btn-primary" type="submit">Convert</button>
+    <button id="test" class="btn btn-primary" type="submit" name="convert" onclick="ajaxTest()">Convert</button>
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -91,6 +93,17 @@
     $(function() {
       $( "#calendario" ).datepicker()
     });
+
+    function ajaxTest() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("result").innerHTML = this.responseText;
+        }
+      };
+      xhttp.send();
+    }
+
     </script>
 </body>
 </html>
